@@ -20,5 +20,7 @@ class MainActivity : AppCompatActivity() {
         val preferences = getSharedPreferences("database", Context.MODE_PRIVATE)
         val savedName = preferences.getString("savedProductName", "This value doesn't exist")
         d("gregor", "Saved message is: $savedName")
+
+        lastSavedProduct.text = savedName
     }
 }
